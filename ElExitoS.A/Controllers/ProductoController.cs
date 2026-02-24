@@ -2,7 +2,7 @@
 using ElExitoS.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ElExitoS.A_.Controllers
+namespace ElExitoSA_.Controllers
 {
     [Route ("producto")]
     public class ProductoController : Controller
@@ -17,41 +17,24 @@ namespace ElExitoS.A_.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            var productos = _productoService.ObtenerDisponibles();
+            var productos = _productoService.ObtenerTodos();
             return View(productos);
         }
 
-        [HttpGet("detalle/{id:int}")]
-        public IActionResult Detalle(int id)
+        [HttpGet("agregar")]
+        public IActionResult Agregar()
         {
-            var producto = _productoService.ObtenerDetalle(id);
-            if (producto == null)
-                return NotFound();
-
-            return View(producto);
+            return View(new Producto());
         }
 
-        [HttpGet("crear")]
-        public IActionResult Crear()
-        {
-            return View(new ProductoViewModel());
-        }
-
-        [HttpPost("crear")]
-        public IActionResult Crear(ProductoViewModel model)
+        [HttpPost("agregar")]
+        public IActionResult Agregar(Producto producto)
         {
             if (!ModelState.IsValid)
-                return View(model);
+                return View(producto);
 
-            var producto = new Producto
-            {
-                Nombre = model.Nombre,
-                Precio = model.Precio,
-                ImagenUrl = _productoService.GuardarImagen(model.Imagen)
-            };
-
-            _productoService.CrearProducto(producto);
-
+            _productoService.AgregarProducto(producto);
+            TempData["Exito"] = "Producto agregado exitosamente.";
             return RedirectToAction("Index");
         }
     }

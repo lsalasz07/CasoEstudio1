@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\luisi\\OneDrive\\Documents\\Progra Avanzada\\CasoEstudio1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01E99453-D170-E699-33BA-E4CE986CFBBB}|ElExitoS.A\\ElExitoS.A..csproj|c:\\users\\luisi\\onedrive\\documents\\progra avanzada\\casoestudio1\\elexitos.a\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E99453-D170-E699-33BA-E4CE986CFBBB}|ElExitoS.A\\ElExitoS.A..csproj|solutionrelative:elexitos.a\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\luisi\\OneDrive\\Documents\\Progra Avanzada\\CasoEstudio1\\ElExitoS.A\\Program.cs",
+              "RelativeDocumentMoniker": "ElExitoS.A\\Program.cs",
+              "ToolTip": "C:\\Users\\luisi\\OneDrive\\Documents\\Progra Avanzada\\CasoEstudio1\\ElExitoS.A\\Program.cs",
+              "RelativeToolTip": "ElExitoS.A\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T20:26:42.991Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

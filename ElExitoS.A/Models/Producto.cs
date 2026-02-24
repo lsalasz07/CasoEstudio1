@@ -4,15 +4,15 @@ namespace ElExitoS.Models
 {
     public class Producto
     {
-        [Key]
         public int Id { get; set; }
 
-        [Required]
-        public string Nombre { get; set; }
+        [Required(ErrorMessage = "El nombre es obligatorio")]
+        [Display(Name = "Nombre del Producto")]
+        public string Nombre { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "El precio es obligatorio")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "El precio debe ser mayor que cero")]
+        [Display(Name = "Precio del Producto")]
         public decimal Precio { get; set; }
-
-        public string? ImagenUrl { get; set; }
     }
 }
