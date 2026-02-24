@@ -1,0 +1,9 @@
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\ElExitoS.A..csproj.AssemblyReference.cache
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\ElExitoS.A..GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\ElExitoS.A..AssemblyInfoInputs.cache
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\ElExitoS.A..AssemblyInfo.cs
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\ElExitoS.A..csproj.CoreCompileInputs.cache
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\ElExitoS.A..MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\ElExitoS.A..RazorAssemblyInfo.cache
+C:\Users\Laboratorio\source\repos\ElExitoS.A\ElExitoS.A\obj\Debug\net10.0\ElExitoS.A..RazorAssemblyInfo.cs
