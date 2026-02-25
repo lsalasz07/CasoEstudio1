@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\luisi\\OneDrive\\Documents\\Progra Avanzada\\CasoEstudio1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01E99453-D170-E699-33BA-E4CE986CFBBB}|ElExitoS.A\\ElExitoS.A..csproj|c:\\users\\luisi\\onedrive\\documents\\progra avanzada\\casoestudio1\\elexitos.a\\views\\factura\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E99453-D170-E699-33BA-E4CE986CFBBB}|ElExitoS.A\\ElExitoS.A..csproj|solutionrelative:elexitos.a\\views\\factura\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E99453-D170-E699-33BA-E4CE986CFBBB}|ElExitoS.A\\ElExitoS.A..csproj|c:\\users\\luisi\\onedrive\\documents\\progra avanzada\\casoestudio1\\elexitos.a\\views\\detallefactura\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E99453-D170-E699-33BA-E4CE986CFBBB}|ElExitoS.A\\ElExitoS.A..csproj|solutionrelative:elexitos.a\\views\\detallefactura\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,13 +20,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\luisi\\OneDrive\\Documents\\Progra Avanzada\\CasoEstudio1\\ElExitoS.A\\Views\\Factura\\Index.cshtml",
-              "RelativeDocumentMoniker": "ElExitoS.A\\Views\\Factura\\Index.cshtml",
-              "ToolTip": "C:\\Users\\luisi\\OneDrive\\Documents\\Progra Avanzada\\CasoEstudio1\\ElExitoS.A\\Views\\Factura\\Index.cshtml",
-              "RelativeToolTip": "ElExitoS.A\\Views\\Factura\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\luisi\\OneDrive\\Documents\\Progra Avanzada\\CasoEstudio1\\ElExitoS.A\\Views\\DetalleFactura\\Index.cshtml",
+              "RelativeDocumentMoniker": "ElExitoS.A\\Views\\DetalleFactura\\Index.cshtml",
+              "ToolTip": "C:\\Users\\luisi\\OneDrive\\Documents\\Progra Avanzada\\CasoEstudio1\\ElExitoS.A\\Views\\DetalleFactura\\Index.cshtml",
+              "RelativeToolTip": "ElExitoS.A\\Views\\DetalleFactura\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAD4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-25T17:39:32.407Z",
+              "WhenOpened": "2026-02-25T18:07:37.015Z",
               "EditorCaption": ""
             }
           ]
