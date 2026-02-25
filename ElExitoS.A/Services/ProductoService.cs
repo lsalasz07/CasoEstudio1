@@ -15,7 +15,7 @@ namespace ElExitoS.A_.Services
 
         private static int _siguienteId = 6;
 
-        public List<Producto> ObtenerTodos()
+        public List<Producto> ObtenerProductos()
             => _productos.ToList();
 
         public Producto? ObtenerPorId(int id)

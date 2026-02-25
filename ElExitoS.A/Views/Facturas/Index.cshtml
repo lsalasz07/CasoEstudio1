@@ -1,0 +1,51 @@
+﻿@model List<ElExitoS.Models.Factura>
+
+@{
+    ViewData["Title"] = "Historial de Facturas";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Historial de Facturas</h2>
+    <a asp-controller="Factura" asp-action="Generar" class="btn btn-primary">+ Nueva Factura</a>
+</div>
+
+@if (TempData["Exito"] != null)
+{
+    <div class="alert alert-success">@TempData["Exito"]</div>
+}
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">No hay facturas registradas aún.</div>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var factura in Model)
+            {
+                <tr>
+                    <td>@factura.Id</td>
+                    <td>@factura.NombreCliente</td>
+                    <td>@factura.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@factura.Total.ToString("C")</td>
+                    <td>
+                        <a asp-controller="Factura" asp-action="Descargar" asp-route-id="@factura.Id"
+                           class="btn btn-sm btn-outline-secondary">
+                            Descargar .txt
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

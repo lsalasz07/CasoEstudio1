@@ -17,7 +17,7 @@ namespace ElExitoSA_.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            var productos = _productoService.ObtenerTodos();
+            var productos = _productoService.ObtenerProductos();
             return View(productos);
         }
 

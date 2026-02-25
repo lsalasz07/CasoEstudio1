@@ -1,0 +1,119 @@
+﻿@model ElExitoS.Models.Factura
+@using ElExitoS.Models
+
+@{
+    ViewData["Title"] = "Generar Factura";
+    var productos = ViewBag.Productos as List<Producto> ?? new List<Producto>();
+}
+
+<h2>Generar Factura</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}
+
+<form method="post" asp-controller="Factura" asp-action="Generar">
+    @Html.AntiForgeryToken()
+
+    <div class="row mb-4">
+        <div class="col-md-5">
+            <label class="form-label fw-bold">Nombre del Cliente</label>
+            <input type="text" name="nombreCliente" class="form-control" required placeholder="Ingrese el nombre del cliente" />
+        </div>
+    </div>
+
+    <h5>Productos</h5>
+    <table class="table table-bordered" id="tablaProductos">
+        <thead class="table-dark">
+            <tr>
+                <th>Producto</th>
+                <th>Precio Unitario</th>
+                <th>Cantidad</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="filasProductos">
+            <tr>
+                <td>
+                    <select name="productoIds" class="form-select producto-select" required>
+                        <option value="">-- Seleccione --</option>
+                        @foreach (var p in productos)
+                        {
+                            <option value="@p.Id" data-precio="@p.Precio">@p.Nombre</option>
+                        }
+                    </select>
+                </td>
+                <td>
+                    <input type="text" class="form-control precio-display" readonly placeholder="₡0.00" />
+                </td>
+                <td>
+                    <input type="number" name="cantidades" class="form-control" min="1" value="1" required />
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="eliminarFila(this)">X</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary mb-3" onclick="agregarFila()">+ Agregar producto</button>
+
+    <div class="d-flex gap-2 mt-2">
+        <button type="submit" class="btn btn-success">Guardar Factura</button>
+        <a asp-controller="Factura" asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        const productosData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(
+                    productos.Select(p => new { id = p.Id, nombre = p.Nombre, precio = p.Precio })
+            ));
+
+    function getOpcionesHtml(selectedId = "") {
+        let opts = '<option value="">-- Seleccione --</option>';
+        productosData.forEach(p => {
+            const sel = p.id == selectedId ? "selected" : "";
+            opts += `<option value="${p.id}" data-precio="${p.precio}" ${sel}>${p.nombre}</option>`;
+        });
+        return opts;
+    }
+
+        function agregarFila() {
+            const tbody = document.getElementById("filasProductos");
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td><select name="productoIds" class="form-select producto-select" required>${getOpcionesHtml()}</select></td>
+                <td><input type="text" class="form-control precio-display" readonly placeholder="₡0.00" /></td>
+                <td><input type="number" name="cantidades" class="form-control" min="1" value="1" required /></td>
+                <td><button type="button" class="btn btn-danger btn-sm" onclick="eliminarFila(this)">X</button></td>
+            `;
+            tbody.appendChild(tr);
+            tr.querySelector(".producto-select").addEventListener("change", actualizarPrecio);
+        }
+
+        function eliminarFila(btn) {
+            const filas = document.querySelectorAll("#filasProductos tr");
+            if (filas.length > 1) {
+                btn.closest("tr").remove();
+            }
+        }
+
+        function actualizarPrecio(e) {
+            const select = e.target;
+            const precio = select.options[select.selectedIndex]?.dataset?.precio || "";
+            const input = select.closest("tr").querySelector(".precio-display");
+            input.value = precio ? `₡${parseFloat(precio).toLocaleString("es-CR", {minimumFractionDigits: 2})}` : "";
+        }
+
+        document.querySelectorAll(".producto-select").forEach(s => {
+            s.addEventListener("change", actualizarPrecio);
+        });
+    </script>
+}
