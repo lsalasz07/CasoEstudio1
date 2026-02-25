@@ -6,6 +6,6 @@ namespace ElExitoS.A_.Services
     {
         List<Factura> ObtenerFacturas();
         Factura? ObtenerPorId(int id);
-        void Agregar(Factura factura);
+        void AgregarFactura(Factura factura);
     }
 }

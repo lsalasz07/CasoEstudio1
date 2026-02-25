@@ -38,7 +38,11 @@ else
                     <td>@factura.NombreCliente</td>
                     <td>@factura.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
                     <td>@factura.Total.ToString("C")</td>
-                    <td>
+                    <td class="d-flex gap-2">
+                        <a asp-controller="DetalleFactura" asp-action="Index" asp-route-facturaId="@factura.Id"
+                           class="btn btn-sm btn-outline-primary">
+                            Ver Detalle
+                        </a>
                         <a asp-controller="Factura" asp-action="Descargar" asp-route-id="@factura.Id"
                            class="btn btn-sm btn-outline-secondary">
                             Descargar .txt

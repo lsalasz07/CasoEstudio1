@@ -2,7 +2,7 @@
 using ElExitoS.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ElExitoSA_.Controllers
+namespace ElExitoS.A_.Controllers
 {
     [Route ("producto")]
     public class ProductoController : Controller

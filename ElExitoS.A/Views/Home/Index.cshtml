@@ -1,8 +1,36 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-5">
+    <h1 class="display-4">Comercializadora El Éxito S.A.</h1>
+    <p class="lead text-muted">Sistema de emisión de facturas de venta</p>
+</div>
+
+<div class="row justify-content-center g-4">
+    <div class="col-md-5">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center p-4">
+                <h4 class="card-title">📦 Productos</h4>
+                <p class="card-text text-muted">Administra el catálogo de productos disponibles para facturar.</p>
+                <div class="d-grid gap-2">
+                    <a asp-controller="Producto" asp-action="Index" class="btn btn-primary">Ver Productos</a>
+                    <a asp-controller="Producto" asp-action="Agregar" class="btn btn-outline-primary">Agregar Producto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center p-4">
+                <h4 class="card-title">🧾 Facturas</h4>
+                <p class="card-text text-muted">Genera nuevas facturas y consulta el historial de ventas.</p>
+                <div class="d-grid gap-2">
+                    <a asp-controller="Factura" asp-action="Index" class="btn btn-success">Ver Historial</a>
+                    <a asp-controller="Factura" asp-action="Generar" class="btn btn-outline-success">Nueva Factura</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
